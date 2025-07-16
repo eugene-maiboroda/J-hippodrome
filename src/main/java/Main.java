@@ -1,5 +1,4 @@
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,17 +10,16 @@ public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) throws Exception {
         List<Horse> horses = List.of(
-                new Horse("Буцефал", 2.4),
-                new Horse("Туз Пик", 2.5),
-                new Horse("Зефир", 2.6),
-                new Horse("Пожар", 2.7),
-                new Horse("Лобстер", 2.8),
-                new Horse("Пегас", 2.9),
-                new Horse("Вишня", 3)
+                new Horse("Thunder", 2.4),
+                new Horse("Blackjack", 2.5),
+                new Horse("Zephyr", 2.6),
+                new Horse("Blaze", 2.7),
+                new Horse("Storm", 2.8),
+                new Horse("Pegasus", 2.9),
+                new Horse("Cherry", 3.0)
         );
         Hippodrome hippodrome = new Hippodrome(horses);
-        logger.info("Начало скачек. Количество участников: {}", horses.size());
-
+        logger.info("Race started. Number of participants: {}", horses.size());
         for (int i = 0; i < 4; i++) {
             hippodrome.move();
             watch(hippodrome);
@@ -30,8 +28,8 @@ public class Main {
 
 
         String winnerName = hippodrome.getWinner().getName();
-        logger.info("Окончание скачек. Победитель: {}", winnerName);
-        System.out.println("Победил " + winnerName + "!");
+        logger.info("Race finished. Winner: {}", winnerName);
+        System.out.println("Winner is " + winnerName + "!");
     }
 
     private static void watch(Hippodrome hippodrome) throws Exception {
