@@ -25,12 +25,7 @@ A simple Java project that simulates horse races (hippodrome). This application 
    ```
 4. Run the application:
 
-   ```bash
-   mvn exec:java
-   ```
-
 > ⚠️ Some tests may not run on Java 23 due to library incompatibilities.
-
 
 
 ### Project Structure
@@ -84,6 +79,5 @@ J-hippodrome/
 
 * Practiced writing parameterized and exception-based unit tests
 * Gained experience using Mockito and `MockedStatic` for mocking static methods
-* Learned to configure Log4j2 for file rotation and cleanup
-* Improved understanding of OOP by implementing encapsulated horse race logic
+* Basics of log rotation and configuring RollingFileAppender in Log4j2
 * Worked with assertions and structured test coverage for constructor and method behaviors
